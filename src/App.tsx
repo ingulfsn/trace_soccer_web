@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./App.css";
+import Signaling from "./services/signaling/socketConnection";
 
-function App() {
+type ConnectionState = "connecting" | "connected" | "failed" | "disconnected";
+
+const App: React.FC = () => {
+  const [connectionState, setConnectionState] =
+    useState<ConnectionState>("connecting");
+  const [counter, setCounter] = useState(0);
+  const signaling = useRef(new Signaling()).current;
+
+  const onConnected = () => {
+    setConnectionState("connected");
+  };
+
+  const onCounterChanged = (count: number) => {
+    setCounter(count);
+  };
+
+  useEffect(() => {
+    const connect = async () => {
+      await signaling.connect();
+      const socket = signaling.socket;
+      if (socket) {
+        socket.on("connect", onConnected);
+        socket.on("counter_update", onCounterChanged);
+      }
+    };
+
+    connect();
+    return signaling.disconnect;
+  }, [signaling]);
+
+  const onCountAction = () => {
+    signaling.requestPromise("count");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {connectionState === "connecting" && <div>Connecting...</div>}
+      {connectionState === "connected" && (
+        <div>
+          {counter}
+          <div>
+            <span
+              className="border rounded-md cursor-pointer"
+              onClick={onCountAction}
+            >
+              Count
+            </span>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
