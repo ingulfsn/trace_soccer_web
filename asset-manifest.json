@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/trace_soccer_web/static/css/main.8dd41a7c.css",
-    "main.js": "/trace_soccer_web/static/js/main.7175dda9.js",
+    "main.css": "/trace_soccer_web/static/css/main.23b333fa.css",
+    "main.js": "/trace_soccer_web/static/js/main.f3a627c5.js",
     "static/js/787.d80e932e.chunk.js": "/trace_soccer_web/static/js/787.d80e932e.chunk.js",
     "index.html": "/trace_soccer_web/index.html",
-    "main.8dd41a7c.css.map": "/trace_soccer_web/static/css/main.8dd41a7c.css.map",
-    "main.7175dda9.js.map": "/trace_soccer_web/static/js/main.7175dda9.js.map",
+    "main.23b333fa.css.map": "/trace_soccer_web/static/css/main.23b333fa.css.map",
+    "main.f3a627c5.js.map": "/trace_soccer_web/static/js/main.f3a627c5.js.map",
     "787.d80e932e.chunk.js.map": "/trace_soccer_web/static/js/787.d80e932e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dd41a7c.css",
-    "static/js/main.7175dda9.js"
+    "static/css/main.23b333fa.css",
+    "static/js/main.f3a627c5.js"
   ]
 }
