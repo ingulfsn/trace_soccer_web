@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/trace_soccer_web/static/css/main.3056d121.css",
-    "main.js": "/trace_soccer_web/static/js/main.087f3eda.js",
+    "main.js": "/trace_soccer_web/static/js/main.a59c909d.js",
     "static/js/787.d80e932e.chunk.js": "/trace_soccer_web/static/js/787.d80e932e.chunk.js",
     "index.html": "/trace_soccer_web/index.html",
     "main.3056d121.css.map": "/trace_soccer_web/static/css/main.3056d121.css.map",
-    "main.087f3eda.js.map": "/trace_soccer_web/static/js/main.087f3eda.js.map",
+    "main.a59c909d.js.map": "/trace_soccer_web/static/js/main.a59c909d.js.map",
     "787.d80e932e.chunk.js.map": "/trace_soccer_web/static/js/787.d80e932e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3056d121.css",
-    "static/js/main.087f3eda.js"
+    "static/js/main.a59c909d.js"
   ]
 }
