@@ -84,7 +84,8 @@ const App: React.FC = () => {
                   );
                 })}
               </div>
-              <div className="absolute top-0 right-0 left-0 h-40 from-slate-200 bg-gradient-to-b" />
+              {/* Fade overlay */}
+              <div className="absolute top-0 right-0 left-0 h-40 max-h-full from-slate-200 bg-gradient-to-b" />
             </div>
             <input
               className="w-full h-10 mt-8 px-3 py-2 focus:outline-0 bg-slate-100 rounded-lg"
